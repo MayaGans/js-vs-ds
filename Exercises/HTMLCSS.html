@@ -1,0 +1,202 @@
+<head>
+	<link rel="stylesheet" href="simple-style.css" />
+</head>
+
+<h1>Cutting Corners</h1>
+<h2>What does your browser display if you forget to close a paragraph or list item tag like this:</h2>
+
+<!-- The paragraphs are still able to render -->
+<p>This paragraph starts but doesn't officially end.
+
+<p>Another paragraph starts here but also doesn't end.
+
+<ul>
+<!-- The list items are also displayed as desired! -->
+  <li>First item in the list isn't closed.
+  <li>Neither is the second.
+</ul>
+
+<h2>What happens if you don’t close a ul or ol list? </h2>
+
+<!-- ul not closed -->
+<ul>
+  <li>First item in the list isn't closed.
+  <li>Neither is the second.
+  
+<!-- The list items are still displayed as desired! -->
+
+<!-- ol not closed -->
+<ol>
+  <li>First item in the list isn't closed.
+  <li>Neither is the second.
+
+<!-- Rather than begin from left most alignment, these are added onto the ul list -->
+</ol>
+</ul>
+
+<h2> Is that behavior consistent with what happens when you omit "&lt;/p	&gt; or &lt;/li	&gt;? </h2>
+<!-- No, because leaving out these closing statements did not change the intended format -->
+
+<h1>Mix and Match<h1>
+<h3>
+	<ol>
+		<li>Create a page that contains a 2x2 table, each cell of which has a three-item bullet-point list. </li>
+		<li>How can you reduce the indentation of the list items within their cells using CSS?</li>
+		<li>Open your page in a different browser (e.g., Firefox or Edge). Do they display your indented lists consistently?</li>
+		<li>Why do programs behave inconsistently? Why do programmers do this to us?</li>
+	</ol>
+</h3>
+
+<table>
+  <tr> 
+  
+  <th>
+  
+ 	 <ul>
+  
+  		<li>
+  		The
+  		</li>
+  		
+  		<li>
+  		First
+  		</li>
+  		
+  		<li>
+  		Header
+  		</li>
+  
+  	</ul>
+  
+  </th>   
+  
+  <th>
+  
+   	 <ul>
+  
+  		<li>
+  		The
+  		</li>
+  		
+  		<li>
+  		Second
+  		</li>
+  		
+  		<li>
+  		Header
+  		</li>
+  
+  	</ul>
+  	
+  </th> 
+  
+ </tr>
+ 
+<tr> 
+	<td>
+	
+	<ul>
+  
+  		<li>
+  		The
+  		</li>
+  		
+  		<li>
+  		First
+  		</li>
+  		
+  		<li>
+  		Content
+  		</li>
+  
+  	</ul>
+	
+	</td> 
+	
+	<td>
+	
+	<ul>
+  
+  		<li>
+  		The
+  		</li>
+  		
+  		<li>
+  		Second
+  		</li>
+  		
+  		<li>
+  		Content
+  		</li>
+  
+  	</ul>
+	
+	</td>    
+
+</tr>
+
+</table>
+
+</p>See style sheet for varying indentation. Styles are not consistent between browsers, each browser uses its own rendering engine!<p>
+
+<h1>Naming</h1>
+<h3>What does the sm in Bootstrap’s col-sm-4 and col-sm-8 stand for? What other options could you use instead? Why do web developers still use FORTRAN-style names in the 21st Century?</h3>
+
+<p>sm refers to small screens. <a href="https://www.w3schools.com/css/css_grid.asp">We can use pure css instead</a> </p>
+
+<h1>Color</h1>
+<h3>HTML and CSS define names for a small number of colors. 
+All other colors must be specified using RGB values. 
+Write a small JavaScript program that creates an HTML page that displays the word color 
+in 100 different randomly-generated colors. Compare this to the color scheme used in your departmental website. 
+Which one hurts your eyes less?</h3>
+
+
+<p id="col"></p>
+
+
+
+<script>
+
+// create string that we will repeat
+var str = "Color "
+
+// create a function that will generate random rdg
+function getRandomRgb(x) {
+  var num = Math.round(0xffffff * Math.random());
+  var r = num >> 16;
+  var g = num >> 8 & 255;
+  var b = num & 255;
+  return x.fontcolor('rgb(' + r + ', ' + g + ', ' + b + ')');
+}
+
+// empty array for loop
+var y = []
+
+// repeat loop t0 run through the function 100 times
+  for (var i = 0; i <= 100; i++) {
+  	y[i] = getRandomRgb(str);
+  }
+
+// print the value to the <p> with id
+document.getElementById("col").innerHTML = y.join("");
+
+
+
+</script>
+         
+</script>
+
+<h1>Units</h1>
+<h3>What different units can you use to specify text size in CSS? What do they mean? What does anything mean, when you get right down to it?</h3>
+
+<ol>
+
+<li> cm (centimeters)
+<li> mm (millimeters)
+<li> in (inches) [1in = 96px = 2.54cm]
+<li> px (pixels) [pixels (1px = 1/96th of 1in)]
+<li> pt (points) [points (1pt = 1/72 of 1in)]
+<li> pc picas [picas (1pc = 12 pt)]
+
+</ol>
