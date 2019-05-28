@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>Hello JSX</title>
+    <script src="https://fb.me/react-15.0.1.js"></script>
+    <script src="https://fb.me/react-dom-15.0.1.js"></script>
+    <script src="https://unpkg.com/babel-standalone@6/babel.js"></script>
+    
+  </head>
+  <body>
+    <div id="app"></div>
+    
+    <script>
+
+    const programmers = [
+    { firstName: "Toby", lastName: 'Hodges'},
+    { firstName: "Greg", lastName: "Wilson"}
+    ]
+    
+      ReactDOM.render(
+        <ul>{programmers.forEach((elem) => <li>`${elem.firstName}` + ` ${elem.lastName}`</li>)}</ul>,
+        document.getElementById('app')
+      )
+      
+      </script>
+    
+  </body>
+</html>
