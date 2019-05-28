@@ -1,0 +1,31 @@
+<html>
+  <head>
+    <meta charset="utf-8" test="test"/>
+  </head>
+  <body>
+    <h1>What Encoding Is This?</h1>
+    <div class="fill"></div>
+    <h2 id="one">Write a function that looks up the character encoding of the page the script is in and prints it to the console.</h2>
+
+    <script>
+    // in the current page and print their names and values.
+    
+    // get the node list
+    const myNodeList = document.querySelectorAll("meta")
+    
+	// Extend the function to look up all the meta tags 
+	
+	// loop over all the attributes within the meta tag
+    for (var i = 0; i < myNodeList[0].attributes.length; i++) {
+    	// get the tag for each
+		let tag = myNodeList[0].attributes[i].nodeName;
+		// get the value of each tag
+		let value =  myNodeList[0].attributes[i].nodeValue;
+		// print to console
+		console.log("tag = " + tag + "; value = " + value);
+	}
+     
+    </script>
+    
+  </body>
+</html>

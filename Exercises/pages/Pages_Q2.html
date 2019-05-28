@@ -1,0 +1,61 @@
+<html>
+  <head>
+    <meta charset="utf-8" test="test"/>
+  </head>
+  <body>
+    <h1>Word Count</h1>
+    
+    <h3>
+    <ol>
+    <li> Write a function called countWords that finds all the text nodes in a page, splits them on white space, and returns the total number of words in the page.
+	<li> Write a second function called showWords that uses the first to find the number of words, then displays that number in a paragraph whose ID is wordcount.
+    </ol>
+    </h3>
+    
+    <p id="wordcount"></p>
+      
+    <script>
+
+	const countWords = () => {
+	
+	const myNodeList = document.querySelectorAll("body");
+	const allWords = []
+	var word = ""
+	
+	for (var i = 1; i < (myNodeList[0].childNodes.length - 1); i++) {
+	
+		if (myNodeList[0].childNodes[i].nodeName === "SCRIPT") {
+			word = "";
+		} else {
+			word = myNodeList[0].childNodes[i].innerText
+		}
+		
+		allWords.push(word)
+
+		}
+		
+		// splitting based on spaces is causing an issue because
+		// some of the words are sep by a tab or ",,"
+		// rather than make clauses for these incidences I'd like
+		// to rewrite with something more general
+		var x = Array.from(new Array(allWords)).join("").split(" ")
+		return x.length
+	}
+
+
+	// second function to print word count
+	const showWords = () => {
+        document.getElementById("wordcount").innerHTML = "Word Count: " + countWords();
+    }
+    
+    // add event listener
+    document.addEventListener("DOMContentLoaded", (event) => {
+  		countWords()
+  		showWords()
+	})
+	
+    </script>
+
+    
+  </body>
+</html>

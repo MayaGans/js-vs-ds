@@ -1,0 +1,31 @@
+<html>
+  <head>
+    <meta charset="utf-8"/>
+    <script src="sort-lists.js"></script>
+  </head>
+  
+  
+  <body onload="sortLists()">
+  
+    <h1>Removing Text Nodes</h1>
+    
+    <h3>In the example that sorts the items in lists, we remove all the text nodes from the list of child nodes before sorting. Why? What happens if remove the line: .filter(c => c.nodeName !== '#text')</h3>
+    
+    <ul class="sorted">
+      <li>first</li>
+      <li>second</li>
+      <li>third</li>
+      <li>fourth</li>
+      <li>fifth</li>
+    </ul>
+
+    <ol class="sorted">
+      <li>one</li>
+      <li>two</li>
+      <li>three</li>
+      <li>four</li>
+      <li>five</li>
+    </ol>
+    
+  </body>
+</html>
