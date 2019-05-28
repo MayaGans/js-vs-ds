@@ -16,5 +16,5 @@ Solutions to Exercises from <a href="https://software-tools-in-javascript.github
 ## Chapter 7: dynamic/
 * Real Data (return later)
 * Ordering (what is listElement.js) (Issue filed)
-* Creating a Component for Names (Issue filed)
-* Striping (return later)
+* Creating a Component for Names (Issue filed) - **NEED TO UPLOAD**
+* Striping (return later) -- **NEED TO UPLOAD**
