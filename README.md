@@ -18,3 +18,5 @@ Solutions to Exercises from <a href="https://software-tools-in-javascript.github
 * Ordering (what is listElement.js) (Issue filed)
 * Creating a Component for Names (Issue filed) - **NEED TO UPLOAD**
 * Striping (return later) -- **NEED TO UPLOAD**
+
+## Chapter 8: Viz/
