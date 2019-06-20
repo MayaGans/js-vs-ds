@@ -56,6 +56,27 @@ for (let value of ['a', 'b', 'c', 'd', 'e']) {
 // with a single-parameter call method, and whose own call method passes a value 
 // through each of them in turn. If any of the components’ call methods returns null, 
 // Pipeline stops immediately and returns null.
+class Pipeline {
 
+	constructor () {
+		this.value
+	}
+	
+	method () {
+		if (is.null(this.value)) {
+			return null
+		} else {
+			return this.value
+		}
+	}
+
+}
+const example = new Pipeline(new Filter('a', 'e', 'i', 'o', 'u'),
+                             new Delay('a'))
+for (let value of ['a' ,'b', 'c', 'd', 'e']) {
+  console.log(value, '->', example.call(value))
+}
 
 // Active Expressions
+
+
