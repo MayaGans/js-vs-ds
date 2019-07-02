@@ -1,0 +1,6 @@
+[500, 1000].forEach(t => {
+  console.log(`about to setTimeout for ${t}`)
+  setTimeout(() => {console.log(`inside timer handler for ${t}`)}, 0)
+})
+console.log("starting")
+
