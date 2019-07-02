@@ -1,6 +1,15 @@
-[500, 1000].forEach(t => {
-  console.log(`about to setTimeout for ${t}`)
-  setTimeout(() => {console.log(`inside timer handler for ${t}`)}, 0)
-})
-console.log("starting")
+const holdingMessage = () => {
+    console.log('Waiting...')
+  }
+  
+  const swingAxe = () => {
+    setTimeout(() => {
+      console.log("This is a sharp Medicine, but it is a Physician for all diseases and miseries.")
+      holdingMessage()
+      console.log('Finished.')
+    }, 100)
+    holdingMessage()
+  }
+  
+  swingAxe()
 
