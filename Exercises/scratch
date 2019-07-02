@@ -6,6 +6,10 @@ const makePromise = (someInteger) => {
   })
 }
 
-new Promise([makePromise(7), makePromise(8), makePromise(2),
-             makePromise(6), makePromise(5)]).then(
-  numbers => console.log(numbers))
+const n = [7,8,2,4]
+
+const newFunction = async (numbers) => {
+    await console.log(numbers)
+}
+
+newFunction(n)
